@@ -1,0 +1,315 @@
+ :root{
+    --bg-color: blueviolet;
+    --color: red;
+    --black: #333;
+ }
+ 
+ body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+
+ .links{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-around;
+    margin-inline: 1rem;
+ }
+ .links h3, .home h1{
+    font-weight: bolder;
+ }
+ .links h3 span, .home span{
+    color: var(--color);
+ }
+.links ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.links li{
+    border-right: 1px solid var(--black);
+}
+.links li a{
+    text-decoration: none;
+    padding-inline: 1rem;
+    cursor: pointer;
+    font-weight: bolder;
+    color: var(--black);
+    text-transform: capitalize;
+}
+.home{
+   width: 70%;
+   margin: 2.5rem auto 3rem auto;
+   height: 50vh;
+}
+.home h2{
+   text-align: center;
+}
+ 
+.home .home_text ul li{
+   font-weight: bold;
+   font-size: 1rem;
+   line-height: 1.3rem;
+}
+ 
+.timeout{
+   width: 60%;
+   height: 70vh;
+   margin: 4.5rem auto;
+   padding: 1rem;
+   color: lightgray;
+   border-radius: 6px;
+   background-image: radial-gradient(at 50% -20%, #908392, #0d060e);
+   box-shadow: 2px 3px 8px #333;
+   animation: swing ease-in-out 1.3s infinite alternate;
+}
+ .timeout .title{
+   text-align: center;
+   text-transform: uppercase;
+   font-weight: bolder;
+   font-size: 3rem;
+   letter-spacing: 5px;
+}
+.timeout .message{
+   text-align: center;
+   margin-top: 6rem;
+}
+
+.footer{
+   margin-top: 3rem;
+   text-align: center;
+   font-weight: bolder;
+   color: #525252;
+}
+ 
+.contact_container{
+   width: 60%;
+   display: flex;
+   justify-content: center;
+   margin: 1.5rem auto;
+  
+}
+.contact_container .left_container{
+   width: 53%;
+   background-image: linear-gradient(25deg, #2e1065 25% 65% , #5b21b6 65% 100% ); 
+   padding: 1rem;
+}
+.left_container h1{
+   font-weight: bolder;
+   margin-bottom: 3rem;
+   color: #fff; 
+
+}
+.left_container .form_control input, textarea{
+   width: 100%;
+   border: none;
+   outline: none;
+   font-weight: bolder;
+   background-color: transparent;
+   border-bottom: 1px solid rgb(163, 161, 161);
+   margin-bottom: 1.7rem;
+   padding-bottom: .6rem;
+   color: azure;
+}
+::placeholder{
+   font-weight: bolder;
+   font-size: .8rem;
+   color: rgb(163, 161, 161);
+}
+.left_container .form_control textarea{
+   resize: none;
+}
+
+.left_container button{
+   border: none;
+   outline: none;
+   padding: 1rem;
+   border-radius: 5px;
+   margin-bottom: 6px;
+   color: #fff;
+   font-weight: bold;
+   text-transform: capitalize;
+   cursor: pointer;
+   background-color: #ef4444;
+}
+
+@keyframes swing {
+   0% { transform: translateX(-10px); }
+   100% { transform: translateX(10); }
+}
+
+.right_container{
+   padding: 2rem;
+   box-shadow: 3px 6px 8px gray;
+   border-radius: 0 7px 7px 0;
+}
+.right_container h1{
+   font-weight: bolder;
+   color: #333;
+   position: relative;
+}
+
+.right_container h1::after{
+   content: "";
+   width: 100px;
+   height: 3px;
+   position: absolute;
+   top: 100%;
+   left: 0%;
+   background-color:  #ef4444;
+   border-radius: 5px;
+}
+.right_container p{
+   font-weight: bold;
+   color: gray;
+}
+
+.right_container .icons, .card .icon{
+   height: 20px;
+   width: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   border: 1px solid whitesmoke;
+   background-color: #2e1065;
+   color: white;
+   text-align: center;
+   padding: 8px;
+   margin-right: 12px;
+}
+.right_container .icon_text p{
+   margin-bottom: 2rem;
+   display: flex;
+   align-items: center;
+}
+.right_container .icon_text .text{
+   color: #525252;
+   font-weight: bold;
+}
+
+.service{
+   width: 70%;
+   margin: 0 auto;
+   /* padding: 1rem; */
+   /* border: 1px solid red; */
+   
+}
+.service header{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   color: #525252;
+   justify-items: center;
+}
+
+.service  header h1{
+   font-weight: bolder;
+   font-size: 2.5rem;
+   text-transform: capitalize;
+   margin-bottom: 0;
+}
+.service header h1 span:nth-child(1){
+   margin-inline: 4px;
+   color: red;
+}
+.service header p{
+   font-weight: bolder;
+}
+.service-card{
+     margin-top: 1rem;
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+     gap: 1.5rem;
+}
+
+.service .service-card .card{
+   background-color: #262626;
+   color: #A3A3A3;
+   text-align: center;
+   border-radius: 5px;
+   box-shadow: 4px 4px 8px #A3A3A3;
+   /* width: 35%; */
+   /* margin: 3rem 1rem  1rem 1rem; */
+   padding: 1.5rem ;
+   transition: 1s ease-out 0.3s;
+}
+.service .service-card .card:hover{
+   background-color: transparent;
+}
+ .card .card-title{
+   font-weight: bolder;
+   text-transform: uppercase;
+ }
+ .service .service-card p{
+   font-weight: bold;
+ }
+.card .icon{
+   width: 40px;
+   height: 40px;
+   border: 1px solid #A3A3A3;
+   background-color: transparent;
+   font-weight: bolder;
+   margin: auto;
+   font-size: xx-large;
+   color: red;
+   
+}
+
+.service .service-card button{
+   padding: 1rem 1.8rem;
+   border: none;
+   margin: 1rem;
+   cursor: pointer;
+   outline: none;
+   font-weight: bolder;
+   border-radius: 5px;
+   background-color: red;
+   color: aliceblue;
+   box-shadow: 3px 3px 3px rgb(211, 73, 73);
+   text-transform: capitalize;
+}
+.service .service-card button span{
+   margin-left: .4rem;
+}
+
+
+
+
+
+@media screen and (max-width: 680px) {
+   .contact_container{
+      display: block;
+      width: 80%;
+   }
+   .contact_container .left_container{
+      width: 90%;
+      margin-top: 2rem;
+      padding: 1.1rem;
+   }
+   .links{
+      display: block;
+   }
+   .links h3{
+      text-align: center;
+   }
+   .links li a{
+      padding: .5rem;
+   }
+   .service{
+      width: 95%;
+      margin: 0 auto;
+      padding: 0;
+   }
+   .timeout{
+      width: 85%;
+   }
+   .timeout .title{
+      font-size: 2rem;
+      letter-spacing: 0;
+   }
+}
+
+ 

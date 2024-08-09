@@ -1,0 +1,48 @@
+<%- include('./partials/header.ejs') %>
+    <%- include('./partials/links.ejs') %>
+    <div class="contact_container">
+        <div class="left_container">
+            <h1>Send us a message</h1>
+            <form action="\userInfo" autocomplete="off" method="POST">
+                <div class="form_control">
+                    <input type="text" placeholder="Name*">
+                </div>
+                <div class="form_control">
+                    <input type="text" placeholder="Email*">
+                </div>
+                <div class="form_control">
+                    <input type="text" placeholder="Subject*">
+                </div>
+                <div class="form_control">
+                     <textarea placeholder="Message*" cols="30" rows="10"></textarea>
+                </div>
+                <button>send message</button>
+            </form>
+        </div>
+        <div class="right_container">
+            <h1>Contact us</h1>
+            <p>we're open for any suggestion or just to have a chat</p>
+            <div class="icon_text">
+                <p>
+                    <i class="fa-solid fa-location-dot icons"></i> 
+                    <span><span class="text">Address:</span>&nbsp;198 West 21th Stresst, suit 721 New York City</span>
+                </p>
+                <p>
+                     <i class="fa-solid fa-phone icons"></i>                   
+                     <span class="text">Phone:</span>&nbsp;
+                     <span>+&nbsp;234904985343</span>
+                </p>
+                <p>
+                    <i class="fa-solid fa-paper-plane icons"></i>
+                    <span class="text">Email:</span>&nbsp;
+                    <span> info@yoursite.com</span>
+                </p>
+                <p>
+                    <i class="fa-sharp fa-solid fa-earth-africa icons"></i> 
+                    <span class="text">Website:</span>&nbsp;
+                    <span>yourwebsite.com</span>
+                </p>
+            </div>
+        </div>
+    </div>
+<%- include('./partials/footer.ejs') %>   
